@@ -33,7 +33,7 @@ function initHtml() {
 	body.innerHTML = header.outerHTML + body.innerHTML;
 	let footer = document.createElement("footer");
 	footer.classList =
-		"d-flex flex-row justify-content-between bg-secondary p-2 footer";
+		"d-flex flex-row justify-content-between p-2 footer";
 	body.appendChild(footer);
 	
 }
@@ -91,11 +91,12 @@ function displayBooks(xml) {
       cardText.innerHTML = description;
       cardBody.appendChild(cardText);
       
-      const cardFooter = document.createElement("div");
-      cardFooter.classList = "card-footer";
-      card.appendChild(cardFooter);
+      
 
       if(gitLink != "null"){
+        const cardFooter = document.createElement("div");
+        cardFooter.classList = "card-footer";
+        card.appendChild(cardFooter);
         const cardGitLink = document.createElement("a");
         cardGitLink.href = gitLink;
         cardGitLink.classList = "btn btn-primary";
@@ -104,24 +105,6 @@ function displayBooks(xml) {
       }
 
   }
-  // <div class="card col-lg-3 col-md-6 col-sm-12 mb-3" style="width: 18rem">
-// 					<div class="card-body">
-// 						<h5 class="card-title">
-// 							Site de jeux vidéo - Formation Développeur Java
-// 						</h5>
-// 						<p class="card-text">
-// 							Site réalisé avec Java et Springboot en back-end et utilisation
-// 							des JSP pour le front-end
-// 						</p>
-// 					</div>
-  //                     <div class="card-footer">
-  //                         <a
-// 							href="https://github.com/Benjamin-Rivero/capEntreprise"
-// 							class="btn btn-primary"
-// 							>Github</a
-// 						>
-  //                     </div>
-// 				</div>
 }
 
 // Charger et afficher les livres au chargement de la page

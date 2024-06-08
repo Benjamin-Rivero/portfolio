@@ -7,17 +7,7 @@ main {
     justify-content: center;
     align-items: center;
 }
-.form-container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-}
-.form-container label {
-    display: block;
-    margin-bottom: 5px;
-}
+
 .form-container input, .form-container textarea {
     width: 100%;
     padding: 10px;
@@ -26,10 +16,12 @@ main {
     border-radius: 5px;
     box-sizing: border-box;
 }
+
 .form-container button {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: #FD6B42;
+    border-color: #FD6B42;
     border: none;
     border-radius: 5px;
     color: white;
@@ -37,5 +29,9 @@ main {
     cursor: pointer;
 }
 .form-container button:hover {
-    background-color: #0056b3;
+    background-color: #ff5020;
+}
+
+label {
+    color:#F5F5F5;
 }
