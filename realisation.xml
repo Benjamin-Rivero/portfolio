@@ -1,0 +1,31 @@
+<!DOCTYPE realisation [
+<!ELEMENT projets (projet+)>
+<!ELEMENT projet (title, description, where*, gitLink*)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT where (#PCDATA)>
+<!ELEMENT gitLink (#PCDATA)>
+]>
+
+<projets>
+<projet>
+    <title>Cap Entreprise</title>
+    <description>Site réalisé avec Java et Springboot en back-end et utilisation des JSP pour le front-end</description>
+    <where>Formation Développeur Java</where>
+    <gitLink>https://github.com/Benjamin-Rivero/capEntreprise</gitLink>
+</projet>
+<projet>
+    <title>Eclate-Lot</title>
+    <description>Développement à l'aide de Java d'un logiciel de répartition de fiches de santé aux diverses mutuelles</description>
+    <where>DUT</where>
+</projet>
+<projet>
+    <title>Salon du vin</title>
+    <description>Reproduction d'une maquette en HTML et CSS, avec en option du JavaScript pour le carousel</description>
+</projet>
+<projet>
+    <title>Pokedex</title>
+    <description>Reproduction d'un pokedex avec Java Spring en back-end et Angular en front-end</description>
+</projet>
+
+</projets>
