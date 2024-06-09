@@ -30,10 +30,11 @@ function initHtml() {
 
   let body = document.getElementsByTagName("body")[0];
 	let header = document.createElement("header");
+  header.classList = "header";
 	body.innerHTML = header.outerHTML + body.innerHTML;
 	let footer = document.createElement("footer");
 	footer.classList =
-		"d-flex flex-row justify-content-between p-2";
+		"d-flex flex-row justify-content-between p-2 footer";
 	body.appendChild(footer);
 	
 }
