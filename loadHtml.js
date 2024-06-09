@@ -105,7 +105,7 @@ function displayCards(xml) {
   }
 }
 
-// Charger et afficher les livres au chargement de la page
+// Charger et afficher les cards, header et footer au chargement de la page
 window.onload = function () {
   if(window.location.pathname.includes("/realisation.html") ){
     loadXMLDoc("./realisation.xml")
@@ -114,6 +114,8 @@ window.onload = function () {
           console.error(error);
       });
   }
+
+  //Charger le header et le footer avec JQuery
   $("header.header").load("header.html");
 	$("footer.footer").load("footer.html");
 };
