@@ -107,7 +107,7 @@ function displayCards(xml) {
 // Charger et afficher les livres au chargement de la page
 window.onload = function () {
   if(window.location.pathname.includes("/realisation.html") ){
-    loadXMLDoc("realisation.xml")
+    loadXMLDoc("./realisation.xml")
       .then(displayCards)
       .catch(function (error) {
           console.error(error);
