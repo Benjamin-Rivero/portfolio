@@ -30,11 +30,10 @@ function initHtml() {
 
   let body = document.getElementsByTagName("body")[0];
 	let header = document.createElement("header");
-	header.classList = "header";
 	body.innerHTML = header.outerHTML + body.innerHTML;
 	let footer = document.createElement("footer");
 	footer.classList =
-		"d-flex flex-row justify-content-between p-2 footer";
+		"d-flex flex-row justify-content-between p-2";
 	body.appendChild(footer);
 	
 }
@@ -116,6 +115,6 @@ window.onload = function () {
   }
 
   //Charger le header et le footer avec JQuery
-  $("header.header").load("header.html");
-	$("footer.footer").load("footer.html");
+  $("header").load("header.html");
+	$("footer").load("footer.html");
 };
