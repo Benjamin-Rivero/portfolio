@@ -1,3 +1,4 @@
+//function pour initialiser certains élement, principalement les CDN utilisés pour Bootstrap, FontAwesome et JQuery
 function initHtml() {
 	const script = document.createElement("script");
 	script.src = "https://code.jquery.com/jquery-3.7.1.min.js"; // Check https://jquery.com/ for the current version
@@ -56,12 +57,10 @@ async function loadXMLDoc(filename) {
   }
 }
 
-// Fonction pour afficher les livres
-function displayBooks(xml) {
+// Fonction pour afficher les cards
+function displayCards(xml) {
   const projets = xml.getElementsByTagName("projet");
-  console.log(projets);
-  const cardSection = document.querySelector("[cards]");
-  console.log(cardSection);
+  const cardSection = document.querySelector(".cards");
   for (let i = 0; i < projets.length; i++) {
       const projet = projets[i];
       const title = projet.getElementsByTagName("title")[0].textContent;
@@ -111,7 +110,7 @@ function displayBooks(xml) {
 window.onload = function () {
 
   loadXMLDoc("realisation.xml")
-      .then(displayBooks)
+      .then(displayCards)
       .catch(function (error) {
           console.error(error);
       });
