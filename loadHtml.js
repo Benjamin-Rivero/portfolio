@@ -90,8 +90,6 @@ function displayCards(xml) {
       cardText.innerHTML = description;
       cardBody.appendChild(cardText);
       
-      
-
       if(gitLink != "null"){
         const cardFooter = document.createElement("div");
         cardFooter.classList = "card-footer";
@@ -108,12 +106,13 @@ function displayCards(xml) {
 
 // Charger et afficher les livres au chargement de la page
 window.onload = function () {
-
-  loadXMLDoc("realisation.xml")
+  if(window.location.pathname == "/realisation.html"){
+    loadXMLDoc("realisation.xml")
       .then(displayCards)
       .catch(function (error) {
           console.error(error);
       });
+  }
   $("header.header").load("header.html");
 	$("footer.footer").load("footer.html");
 };
