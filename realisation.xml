@@ -1,4 +1,4 @@
-<!DOCTYPE realisation [
+<!DOCTYPE projets [
 <!ELEMENT projets (projet+)>
 <!ELEMENT projet (title, description, where*, gitLink*)>
 <!ELEMENT title (#PCDATA)>
@@ -6,6 +6,7 @@
 <!ELEMENT where (#PCDATA)>
 <!ELEMENT gitLink (#PCDATA)>
 ]>
+
 
 <projets>
 <projet>
