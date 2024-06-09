@@ -97,6 +97,7 @@ function displayCards(xml) {
         const cardGitLink = document.createElement("a");
         cardGitLink.href = gitLink;
         cardGitLink.classList = "btn btn-primary";
+        cardGitLink.target="_blank";
         cardGitLink.innerHTML = "Depot Git";
         cardFooter.appendChild(cardGitLink);
       }

@@ -23,6 +23,7 @@
 <projet>
     <title>Salon du vin</title>
     <description>Reproduction d'une maquette en HTML et CSS, avec en option du JavaScript pour le carousel</description>
+    <gitLink>https://gitlab.com/benjamin.rivero24/humanbooster</gitLink>
 </projet>
 <projet>
     <title>Pokedex</title>
