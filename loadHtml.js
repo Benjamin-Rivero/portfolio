@@ -1,9 +1,11 @@
 //function pour initialiser certains élement, principalement les CDN utilisés pour Bootstrap, FontAwesome et JQuery
 function initHtml() {
+  //Créer et ajouter CDN JQuery
 	const script = document.createElement("script");
 	script.src = "https://code.jquery.com/jquery-3.7.1.min.js"; // Check https://jquery.com/ for the current version
 	document.getElementsByTagName("head")[0].appendChild(script);
 
+  //Créer et ajouter CDN Bootstrap et JS de Bootstrap
 	const bootstrap = document.createElement("link");
 	bootstrap.rel = "stylesheet";
 	bootstrap.href =
@@ -18,16 +20,19 @@ function initHtml() {
 	bootstrapJS.crossOrigin = "anonymous";
 	document.getElementsByTagName("head")[0].appendChild(bootstrapJS);
 
+  //Créer et ajouter CDN FontAwesome
 	const fontAwesome = document.createElement("script");
 	fontAwesome.src = "https://kit.fontawesome.com/84cf682a85.js";
 	fontAwesome.crossOrigin = "anonymous";
 	document.getElementsByTagName("head")[0].appendChild(fontAwesome);
 
+  //Créer et ajouter feuille de style commune a toutes les pages
 	const common = document.createElement("link");
 	common.rel = "stylesheet";
 	common.href = "common.css";
 	document.getElementsByTagName("head")[0].appendChild(common);
 
+  //Créer et ajouter les balises header et footer dans la page
   let body = document.getElementsByTagName("body")[0];
 	let header = document.createElement("header");
   header.classList = "header";
@@ -57,7 +62,7 @@ async function loadXMLDoc(filename) {
   }
 }
 
-// Fonction pour afficher les cards
+// Fonction pour créer et afficher les cards
 function displayCards(xml) {
   const projets = xml.getElementsByTagName("projet");
   const cardSection = document.querySelector(".cards");
@@ -115,7 +120,7 @@ window.onload = function () {
       });
   }
 
-  //Charger le header et le footer avec JQuery
+  //Charger le header et le footer avec JQuery à partir des fichiers HTML
   $("header").load("header.html");
 	$("footer").load("footer.html");
 };
